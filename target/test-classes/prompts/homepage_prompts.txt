@@ -1,0 +1,90 @@
+# AJIO Homepage Test Scenarios and Prompts
+
+## Basic Navigation
+1. Navigate to AJIO homepage
+2. Verify that you are on the AJIO homepage
+3. Check if the MEN tab is visible
+4. Check if the WOMEN tab is visible
+
+## Navigation Actions
+1. Click on the MEN tab when needed
+2. Click on the WOMEN tab when needed
+3. Wait for the page to fully load after any navigation
+
+## Section Validations
+1. Confirm you are in the MEN section when applicable
+2. Confirm you are in the WOMEN section when applicable
+3. Check if the current URL matches the expected section
+
+## Common Test Scenarios
+
+### Scenario 1: Homepage Navigation
+Steps:
+1. Open the browser
+2. Navigate to AJIO homepage
+3. Verify the page has loaded completely
+4. Verify both MEN and WOMEN tabs are visible
+
+Expected Results:
+- Homepage should load successfully
+- Both MEN and WOMEN tabs should be clearly visible
+- Error if homepage fails to load: "AJIO homepage failed to load"
+- Success message: "Successfully loaded AJIO homepage"
+
+### Scenario 2: Navigate to Men's Section
+Steps:
+1. Verify MEN tab is visible
+2. Click on MEN tab
+3. Wait for page to load
+4. Verify URL contains '/shop/men'
+5. Verify user is in MEN section
+
+Expected Results:
+- Should successfully navigate to MEN section
+- URL should contain '/shop/men'
+- Error if MEN tab isn't visible: "MEN tab is not visible on the page"
+- Success message: "Successfully navigated to MEN section"
+
+### Scenario 3: Navigate to Women's Section
+Steps:
+1. Verify WOMEN tab is visible
+2. Click on WOMEN tab
+3. Wait for page to load
+4. Verify URL contains '/shop/women'
+5. Verify user is in WOMEN section
+
+Expected Results:
+- Should successfully navigate to WOMEN section
+- URL should contain '/shop/women'
+- Error if WOMEN tab isn't visible: "WOMEN tab is not visible on the page"
+- Success message: "Successfully navigated to WOMEN section"
+
+### Scenario 4: Switch Between Sections
+Steps:
+1. Verify current section (MEN or WOMEN)
+2. Click on the other section's tab
+3. Wait for page load
+4. Verify URL contains correct path
+5. Verify user is in correct section
+
+Expected Results:
+- Should successfully switch between sections
+- URL should update accordingly
+- Error if navigation fails: "Failed to navigate to the specified section"
+- Success message will indicate which section was reached
+
+## Important Timeouts
+- Page Load Timeout: 30 seconds
+- Element Wait Timeout: 10 seconds
+- Navigation Wait Timeout: 5 seconds
+
+## URL Patterns
+- Men's Section: /shop/men
+- Women's Section: /shop/women
+
+## Assertion Guidelines
+1. Element Visibility: "{element} should be visible on the page"
+2. URL Validation: "URL should contain '{expected_url}' after clicking {section} tab"
+3. Section Loading: "{section} section should be loaded correctly"
+
+Note: All test steps should be executed in order and any failure should be properly logged with the corresponding error message.
