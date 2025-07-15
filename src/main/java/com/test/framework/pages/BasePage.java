@@ -45,4 +45,9 @@ public class BasePage {
             return false;
         }
     }
+
+    protected void waitForPageLoad() {
+        wait.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
+    }
 }
